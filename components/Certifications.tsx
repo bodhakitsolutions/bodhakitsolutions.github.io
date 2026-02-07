@@ -1,25 +1,21 @@
 import React from 'react';
-import { Award, Building2, CheckCircle } from 'lucide-react';
 
 const Certifications: React.FC = () => {
   const certifications = [
     {
       name: 'ISO 9001:2015',
       subtitle: 'Quality Management',
-      icon: Award,
-      color: 'text-blue-600',
+      image: '/certified_logos/iso.webp',
     },
     {
       name: 'MSME Registered',
       subtitle: 'Government of India',
-      icon: CheckCircle,
-      color: 'text-orange-600',
+      image: '/certified_logos/msme.jpg',
     },
     {
       name: 'Ministry of Corporate Affairs',
       subtitle: 'Government of India',
-      icon: Building2,
-      color: 'text-amber-600',
+      image: '/certified_logos/mca.svg',
     },
   ];
 
@@ -29,18 +25,19 @@ const Certifications: React.FC = () => {
         <h3 className="text-center text-slate-600 font-semibold text-sm mb-10">Certifications & Recognition</h3>
         
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-          {certifications.map((cert, index) => {
-            const IconComponent = cert.icon;
-            return (
-              <div key={index} className="flex flex-col items-center">
-                <div className={`w-28 h-28 bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg border border-slate-200 flex items-center justify-center shadow-sm hover:shadow-lg transition-all duration-300 group`}>
-                  <IconComponent className={`w-16 h-16 ${cert.color} group-hover:scale-110 transition-transform duration-300 opacity-70`} />
-                </div>
-                <p className="text-xs text-slate-600 mt-3 font-semibold text-center">{cert.name}</p>
-                <p className="text-xs text-slate-400 text-center">{cert.subtitle}</p>
+          {certifications.map((cert, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <div className="w-28 h-28 bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg border border-slate-200 flex items-center justify-center shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group">
+                <img 
+                  src={cert.image} 
+                  alt={cert.name}
+                  className="w-24 h-24 object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
-            );
-          })}
+              <p className="text-xs text-slate-600 mt-3 font-semibold text-center">{cert.name}</p>
+              <p className="text-xs text-slate-400 text-center">{cert.subtitle}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
