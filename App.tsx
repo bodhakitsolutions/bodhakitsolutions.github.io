@@ -10,7 +10,6 @@ import CaseStudies from './components/CaseStudies';
 import Careers from './components/Careers';
 import PerformanceStats from './components/PerformanceStats';
 import ContactUs from './components/ContactUs';
-import Certifications from './components/Certifications';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -28,7 +27,6 @@ const App: React.FC = () => {
         <PerformanceStats />
         <ContactUs />
       </main>
-      <Certifications />
       <Footer />
     </div>
   );
