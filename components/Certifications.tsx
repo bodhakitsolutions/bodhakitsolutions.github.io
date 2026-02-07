@@ -15,7 +15,7 @@ const Certifications: React.FC = () => {
     {
       name: 'Ministry of Corporate Affairs',
       subtitle: 'Government of India',
-      image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Emblem_of_India.svg/800px-Emblem_of_India.svg.png',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Ministry_of_Corporate_Affairs_India.svg',
     },
   ];
 
